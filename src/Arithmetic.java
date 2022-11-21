@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Arithmetic {
     public static void main(String[] args) {
+
         System.out.println("Введите первое число:");
         Scanner firstScanner = new Scanner(System.in);
         int firstNumber = firstScanner.nextInt();
