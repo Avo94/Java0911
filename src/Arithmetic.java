@@ -3,19 +3,36 @@ import java.util.Scanner;
 public class Arithmetic {
     public static void main(String[] args) {
 
-        System.out.println("Введите первое число:");
-        Scanner firstScanner = new Scanner(System.in);
-        int firstNumber = firstScanner.nextInt();
+        printMessage("Введите первое число:");
+        Scanner scanner = new Scanner(System.in);
+        int firstNumber = scanner.nextInt();
+        printMessage("Введите второе число:");
+        int secondNumber = scanner.nextInt();
 
-        System.out.println("Введите второе число:");
-        Scanner secondScanner = new Scanner(System.in);
-        int secondNumber = secondScanner.nextInt();
+        printMessage("Сумма: " + sum(firstNumber, secondNumber));
+        printMessage("Произведение: " + op(firstNumber, secondNumber));
+        printMessage("Разность: " + dif(firstNumber, secondNumber));
+        printMessage("Частное: " + quot(firstNumber, secondNumber));
+    }
 
-        double doubleParser = 1.0;
+    public static void printMessage(String output) {
+        System.out.println(output);
+    }
 
-        System.out.println("Сумма: " + (firstNumber + secondNumber));
-        System.out.println("Произведение: " + (firstNumber * secondNumber));
-        System.out.println("Разность: " + (firstNumber - secondNumber));
-        System.out.println("Частное: " + (doubleParser * firstNumber / secondNumber));
+    public static int sum(int firstNumber, int secondNumber) {
+        return firstNumber + secondNumber;
+
+    }
+
+    public static int op(int firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
+    }
+
+    public static int dif(int firstNumber, int secondNumber) {
+        return firstNumber - secondNumber;
+    }
+
+    public static double quot(int firstNumber, int secondNumber) {
+        return 1.0 * firstNumber / secondNumber;
     }
 }
