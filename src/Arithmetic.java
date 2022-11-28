@@ -21,7 +21,6 @@ public class Arithmetic {
 
     public static int sum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
-
     }
 
     public static int op(int firstNumber, int secondNumber) {
