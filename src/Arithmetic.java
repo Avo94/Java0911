@@ -4,34 +4,30 @@ public class Arithmetic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        printMessage("Введите первое число:");
+        System.out.println("Введите первое число:");
         int firstNumber = scanner.nextInt();
-        printMessage("Введите второе число:");
+        System.out.println("Введите второе число:");
         int secondNumber = scanner.nextInt();
 
-        printMessage("Сумма: " + sum(firstNumber, secondNumber));
-        printMessage("Произведение: " + op(firstNumber, secondNumber));
-        printMessage("Разность: " + dif(firstNumber, secondNumber));
-        printMessage("Частное: " + quot(firstNumber, secondNumber));
-    }
-
-    public static void printMessage(String output) {
-        System.out.println(output);
+        System.out.println("Сумма: " + sum(firstNumber, secondNumber));
+        System.out.println("Произведение: " + product(firstNumber, secondNumber));
+        System.out.println("Разность: " + difference(firstNumber, secondNumber));
+        System.out.println("Частное: " + quotient(firstNumber, secondNumber));
     }
 
     public static int sum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
 
-    public static int op(int firstNumber, int secondNumber) {
+    public static int product(int firstNumber, int secondNumber) {
         return firstNumber * secondNumber;
     }
 
-    public static int dif(int firstNumber, int secondNumber) {
+    public static int difference(int firstNumber, int secondNumber) {
         return firstNumber - secondNumber;
     }
 
-    public static double quot(int firstNumber, int secondNumber) {
+    public static double quotient(int firstNumber, int secondNumber) {
         return 1.0 * firstNumber / secondNumber;
     }
 }

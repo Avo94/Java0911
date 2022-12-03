@@ -7,8 +7,20 @@ public class NumberFinder {
         Scanner scanner = new Scanner(System.in);
         int threeDigitNumber = scanner.nextInt();
 
-        System.out.println("Сотни: " + (threeDigitNumber / 100));
-        System.out.println("Десятки: " + (threeDigitNumber / 10 % 10));
-        System.out.println("Единицы: " + (threeDigitNumber % 10));
+        System.out.println("Сотни: " + getUnits(threeDigitNumber));
+        System.out.println("Десятки: " + getTens(threeDigitNumber));
+        System.out.println("Единицы: " + getHundreds(threeDigitNumber));
+    }
+
+    public static int getUnits(int threeDigitNumber) {
+        return threeDigitNumber / 100;
+    }
+
+    public static int getTens(int threeDigitNumber) {
+        return threeDigitNumber / 10 % 10;
+    }
+
+    public static int getHundreds(int threeDigitNumber) {
+        return threeDigitNumber % 10;
     }
 }
