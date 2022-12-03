@@ -12,15 +12,15 @@ public class NumberFinder {
         System.out.println("Единицы: " + getHundreds(threeDigitNumber));
     }
 
-    public static int getUnits(int threeDigitNumber) {
-        return threeDigitNumber / 100;
+    public static int getUnits(int inputNumber) {
+        return inputNumber / 100;
     }
 
-    public static int getTens(int threeDigitNumber) {
-        return threeDigitNumber / 10 % 10;
+    public static int getTens(int inputNumber) {
+        return inputNumber / 10 % 10;
     }
 
-    public static int getHundreds(int threeDigitNumber) {
-        return threeDigitNumber % 10;
+    public static int getHundreds(int inputNumber) {
+        return inputNumber % 10;
     }
 }
